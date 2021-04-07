@@ -21,7 +21,7 @@ cd ../bis_aligned
 
 for i in *.bam;
 do
-#filename=`echo $i | awk -F '_1_val_1_bismark_bt2_pe.bam' '{print $1}'`
+filename=`echo $i | awk -F '_1_val_1_bismark_bt2_pe.bam' '{print $1}'`
 ../software/Bismark-0.22.3/deduplicate_bismark $i
 done
 
