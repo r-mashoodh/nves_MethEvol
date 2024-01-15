@@ -1,3 +1,4 @@
+
 BinMeth<-function(data_in){
 
 Input<-as.numeric(data_in)
