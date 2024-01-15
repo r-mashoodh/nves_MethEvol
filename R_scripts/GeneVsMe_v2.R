@@ -1,4 +1,4 @@
-#cluster Rahia
+# Script to identify methylated genes between conditions
 
 BinMeth<-function(data_in){
 
