@@ -8,7 +8,7 @@
 #gunzip GCF_001412225.1_Nicve_v1.0_genomic.fna.gz
 
 cd genomes 
-# genome preparation for m_zebra
+# genome preparation for n_vespilloides
 ../software/Bismark-0.22.3/bismark_genome_preparation --bowtie2 n_vesp/
 
 # genome preparation for spike in
