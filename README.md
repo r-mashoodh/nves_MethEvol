@@ -1,6 +1,6 @@
 ### Sarkies et al., (2024) Gene body methylation evolves during the sustained loss of parental care in the burying beetle.
 
-1. BS_processing - contains scripts for trimming, mapping and quantification of methylation data.
+#### 1. BS_processing - contains scripts for trimming, mapping and quantification of methylation data.
    -
    -
    -
