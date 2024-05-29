@@ -6,13 +6,13 @@
    -
    -
     
-3. RNA_processing - contains scripts for trimpping, mapping and quantification of RNA sequencing data.
+#### 2. RNA_processing - contains scripts for trimpping, mapping and quantification of RNA sequencing data.
    -
    -
    -
    -
    
-5. R_scripts - contains scripts for analysing methylation and transcriptomic data.
+#### 3. R_scripts - contains scripts for analysing methylation and transcriptomic data.
    - 1_RNA_xpsn_Deseq2.R - * *RNA-seq analysis* *
    - 2_Cpg_evol.R - * *Differential mCpG analysis* *
    - 3_Mixtools_classification_DMGs.R - * *Differential gene methylation analysis* *
