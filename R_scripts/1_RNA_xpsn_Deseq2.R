@@ -1,5 +1,3 @@
-# Feb 6 2020
-
 # Load required libraries
 library(tidyverse)
 library(DESeq2)
