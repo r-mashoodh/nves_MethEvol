@@ -148,50 +148,6 @@ counts.for.mixmdl <- nves.meth.all %>%
          meth_mean = meth_count / (meth_count + unmeth_count)) %>%
   filter(region_ID %in% methylated.mixmdl$region_ID)
 
-# # including all samples plus an interaction (factor coded)
-# binom.mixmdl <- counts.for.mixmdl %>% 
-#   group_by(region_ID) %>% 
-#   do(tidy(glm(cbind(.$meth_count,.$unmeth_count) ~ .$evol*.$env, family="binomial"))) %>%
-#   filter(term == ".$evolNC")
-# 
-# binom.mixmdl$padj <- p.adjust(binom.mixmdl$p.value, n=nrow(binom.mixmdl), method="BH")
-# 
-# hist(binom.mixmdl$p.value)
-# 
-# length(which(binom.mixmdl$padj < 0.01))
-# # [1] 1429
-# 
-# length(which(binom.mixmdl$padj < 0.05))
-# # [1] 1891
-
-
-# ### add env as a covariate?
-# 
-# cov.test <- counts.for.mixmdl %>% 
-#   group_by(region_ID) %>% 
-#   do(tidy(glm(cbind(.$meth_count,.$unmeth_count) ~ .$evol_num + .$env_num, family="binomial"))) %>% 
-#   filter(term == ".$evol_num")
-# 
-# cov.test$padj <- p.adjust(cov.test$p.value, method="BH", n=nrow(cov.test))
-# 
-# cov.filtered <- cov.test %>% 
-#   filter(padj < 0.01) %>% 
-#   arrange(-abs(estimate))
-# 
-# # this is actually an interaction
-# counts.for.mixmdl %>% 
-#   filter(region_ID == "LOC108563366") %>% 
-#   ggplot(., aes(x=group, y=meth_mean)) +
-#   geom_boxplot()
-# 
-# # barely detectable effect?
-# counts.for.mixmdl %>% 
-#   filter(region_ID == "LOC108558176") %>% 
-#   ggplot(., aes(x=group, y=meth_mean)) +
-#   geom_boxplot()
-# 
-# ## so really adding env as a covariate doesn't really work 
-# ## need to just do it separately, so why not filter by group
 
 binom.mixmdl.evol <- counts.for.mixmdl %>% 
   filter(group == "FCFC" | group == "NCNC") %>% 
